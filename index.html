@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Studios</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+            scroll-behavior: smooth;
+        }
+        header {
+            background: linear-gradient(90deg, #ff6600, #ff3300);
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            background: #333;
+            padding-top: 20px;
+            transition: 0.3s;
+        }
+        .sidebar a {
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+            display: block;
+            transition: 0.2s;
+        }
+        .sidebar a:hover {
+            background: #ff6600;
+        }
+        .open-btn {
+            position: absolute;
+            left: 10px;
+            top: 20px;
+            background: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 25px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .content {
+            margin-left: 20px;
+            padding-top: 60px;
+        }
+        section {
+            padding: 50px 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="open-btn" onclick="openSidebar()">☰ Menu</button>
+        <h1>Welcome to Cowabunga!</h1>
+    </header>
+    
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="closeSidebar()">×</button>
+        <a href="#features" onclick="closeSidebar()">Features</a>
+        <a href="#community" onclick="closeSidebar()">Community</a>
+        <a href="#download" onclick="closeSidebar()">Download</a>
+    </div>
+    
+    <div class="content">
+        <section>
+            <h2>Explore & Play</h2>
+            <p>Dive into a world where you can hang out, shop for cool cosmetics, and experience thrilling adventures.</p>
+            <a href="#download" class="btn">Download Now</a>
+        </section>
+    
+        <section id="features">
+            <h3>🌳Forest</h3>
+            <p>Relax, explore, and play fun minigames with friends in immersive liminal environments.</p>
+            <h3>🛍️ Shop</h3>
+            <p>Customize your character with awesome cosmetics and stand out in the game.</p>
+            <h3>👻 Horror Mode</h3>
+            <p>For thrill-seekers, enter a chilling adventure filled with suspense and surprises!</p>
+        </section>
+    
+        <section id="community">
+            <h2>Join Our Community</h2>
+            <p>Stay connected and meet other players!</p>
+            <a href="#" class="btn">Join Discord</a>
+        </section>
+    
+        <section id="download">
+            <h2>Download</h2>
+            <p>Coming soon! Stay tuned for updates.</p>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Connect Studio. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        function openSidebar() {
+            document.getElementById("sidebar").style.left = "0";
+        }
+        function closeSidebar() {
+            document.getElementById("sidebar").style.left = "-250px";
+        }
+    </script>
+</body>
+</html>
